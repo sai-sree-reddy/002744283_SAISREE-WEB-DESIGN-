@@ -4,7 +4,7 @@ Assignment 1
 
 Part A : Eat Fit
 
-It is a website for user to view the services like Meditation, Yoga, Food and Spa provided by NU Wellness.
+It is a website for user to view the services like Meditation, Yoga, Food and Spa provided by wellness by Eat Fit.
 The site lands on the Home Page, which previews the services and navigates to two other pages,
 - JOIN US : a form to enter details to join.
 - CONTACT US : a table which provides the location details and links to their email.
