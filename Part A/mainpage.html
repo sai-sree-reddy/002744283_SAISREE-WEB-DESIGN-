@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eat Fit</title>
+        <link rel="icon" href="images/icons8-green-91.png" type="image/png">
+
+        <style>
+            header{
+                font-size: larger;
+                padding: 5px;
+                text-align: center;
+                font-family: "Lucida Handwriting", "Brush Script MT", cursive;    
+            }
+
+            nav{
+                padding: 10px;
+                font-size: larger;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            body{
+                background-position:top;
+                background-size:cover;
+                background-image: url("images/background.jpg");
+                min-height: 100%;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: large;
+            }
+            footer{
+                text-align: center;
+                bottom: 0;
+            }
+            .nav{
+                float:left;
+                padding: 15px 15px;
+            }
+            .nav:hover{
+                cursor: pointer;
+                border-radius: 25px;
+                border: 2px solid gray;
+            }
+            a:hover{
+                color:gray;
+            }
+            a{
+                color:black;
+            }
+          
+            #about{
+                padding:50px 20px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .category{
+                text-align: center;
+                width: 20%;
+                padding: 2%;
+            }
+            .services{
+                float: left;
+                width: 20%;
+                padding:2.5%;
+                text-align: center;
+                
+            }
+            button{
+                background-color: rgb(95, 226, 230);
+                border: none;
+                padding: 20px 40px;
+                font-size: 20px;
+                text-align: center;
+                display: inline-block; 
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1><img src="images/icons8-green-91.png" alt="">Eat Fit</h1>
+        </header>
+        
+        <nav>
+            <div class="nav"><a href="#about">About</a></div>
+            <div class="nav"><a href="form.html" target="_blank">Join Us</a> </div>
+            <div class="nav"><a href="table.html" target="_blank">Contact Us</a></div>              
+        </nav>
+
+        <div id="about">
+                <h2>What is Eat Fit?</h2>
+                <h3>Eat Fit is a time tested, evidence-based approach to living your best life based on 4 tenets:
+                </h3>
+                <img src="images/pictures.gif" alt="" style="width: 1000px; height:700px; float: right;">
+                <div class="category">
+                    <h3>Sleep is Wellness</h3>
+                    <p> 
+                        Health issues like obesity,heart diseases, cancer and dementia are caused from poor sleep.
+                    </p>
+                </div>
+                
+                <div class="category">
+                    <h3>Exercise is Wellness</h3>
+                    <p>
+                        Help your heart, mind and body by moving more throughout the day. The journey of a thousand miles beings with the first step.
+                    </p>
+                </div>
+                <div class="category">
+                    <h3>Gratitude is Wellness</h3>
+                    <p>
+                        Show gratitude, make time for family and friends, practice mindfulness, and pass the gift of kindness to others.
+                    </p>
+                </div>
+                <div class="category">
+                    <h3>Food is Wellness</h3>
+                    <p>
+                        You don’t need to follow the latest fad diet. A Whole food Plant-Based diet is proven to improve every aspect of your health.
+                    </p>
+                </div>
+        </div>
+        
+        <div id="services">
+            <h1 style="text-align:center"><b>Our Services</b></h1>
+
+            <div class="services">
+                <img src="images/meditationone.jpeg" alt="meditation" height="250" width="250">
+                <h3>MEDITATION</h3>
+                <p>
+                    Shown to boost the immune system, Relaxation & Visualization courses uses well researched techniques that teach participants to relax both body and mind while increasing awareness and recognizing and developing visual images. 
+                </p>
+            </div>
+            <div class="services">
+                <img src="images/yogaone.jfif" alt="yoga" height="550" width="550">
+                <h3>YOGA</h3>
+                <p>
+                    Yoga is a centuries-old practice rooted in the inherently calming nature of its exercises. We love yoga as a practice for our participants because it impacts both the body and the mind, both of which need to be healthy while living.
+                </p>
+            </div>
+            <div class="services">
+                <img src="images/foodhe.jpg" alt="food" height="350" width="350">
+                <h3>FOOD</h3>
+                <p>
+                    Just as physical strength is important, so is a healthy diet. Led by our experienced nutrition instructor, Jodi Smith, this program focuses on teaching participants about foods that provide good nutrition and lots of antioxidants and anti-inflammatory properties.
+                </p>
+            </div>
+            <div class="services">
+                <img src="images/spa.jpg" alt="spa" height="350" width="350">
+                <h3>SPA</h3>
+                <p>
+                    Led by licensed physical therapist, Jan Wilson, Creative Expressions focuses on the healing aspects of therapeutic arts and creativity.
+                </p>
+            </div>
+        </div><br>
+
+        <div class="button" style="margin-top:700px;margin-bottom:100px; text-align: center;">        
+            <h2>JOIN US TODAY TO GET 25% OFF ON YOUR YEARLY SUBSCRIPTION!!!</h2>
+        <button onclick="window.location.href='form.html'">Join Us</button>
+        </div>
+
+        <footer>
+            <p>Phone number : +1(777)777-7777</p>
+            <p>E-mail : message@eatfit.org</p>
+        </footer>
+
+    </body>
+</html>
