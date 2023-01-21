@@ -11,7 +11,7 @@ Tags used -
 ~ Favicon - It adds an image/icon to the title of the page in the browser tab.
 ~ <form> - It is used to create a form for the user input. I have used <label> and <input> tags to create a form for users to enter their details to join the wellness by joining Eat fit community.
 ~ <table> - It creates a table in the HTML page. I have used <tr>, <th> and <td> tags to create a table which contains the location details and links to the representative's email.
-	- <tr> defines rows.
+	- </tr> defines rows.
 	- <th> defines table header.
 	- <td> defines table cells.
 ~ <header> - It works as container for the introduction of page. I used it to preview the page icon and page name. 
