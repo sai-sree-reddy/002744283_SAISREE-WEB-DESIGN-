@@ -8,12 +8,13 @@ Two websites
 Tags used:
 
 Tags used - 
-~ Favicon - It adds an image/icon to the title of the page in the browser tab. 
-~ <form> - It is used to create a form for the user input. I have used <label> and <input> tags to create a form for users to enter their details to join the wellness by joining Eat fit community. 
-~ table - It creates a table in the HTML page. I have used <tr>, <th> and <td> tags to create a table which contains the location details and links to the representative's email. 
-	- tr defines rows.
-	- th defines table header.
-	- td defines table cells.
+~ Favicon - It adds an image/icon to the title of the page in the browser tab. /
+~ <form> - It is used to create a form for the user input. I have used <label> and <input> tags to create a form for users to enter their details to join the wellness by/
+	joining Eat fit community. /
+~ table - It creates a table in the HTML page. I have used <tr>, <th> and <td> tags to create a table which contains the location details and links to the representative's email. /
+	- tr defines rows./
+	- th defines table header./
+	- td defines table cells./
 ~ <header> - It works as container for the introduction of page. I used it to preview the page icon and page name. 
 ~ <footer> - It defines the footer section of the HTML page. I have used it to provide phone number and email of NU Wellness.
 ~ <nav> - It defines a section for navigation links. I have used it for navbar to link all 3 pages, i.e. About, Join Us, Contact Us.
