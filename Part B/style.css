@@ -1,0 +1,100 @@
+body{
+    background-color:black;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{
+    margin-left: 1%;
+    padding: 5px;
+    text-align: left;
+    font-size: 30px;
+}
+nav{
+    margin-right: 1%;
+}
+.nav{
+    float:right;
+    padding: 15px 15px;
+    color: white;
+    font-size: 30px;
+}
+.nav:hover{
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid rgb(148, 211, 223);
+}
+a:hover{
+    color: rgb(148, 211, 223);
+}
+a{
+    color:white;
+}
+.welcome{
+    margin-left: 1%;
+    float: left;
+    font-size:40px; 
+    text-align:left;
+    padding-top:380px;
+    width:30%;
+}
+#firstimg{
+    background-image: url(media/mainframe.gif);
+    min-width: 100%;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 630px;
+    margin-top: 0%;
+    opacity:0.9;
+}
+#home, #artists{
+    padding-top: 70px;
+}
+.releases, .artists{
+   float: left; 
+    padding: 8px;
+    font-size: 30px;
+    /*align-items: center;*/
+}
+.artists:hover{
+    transform: scale(1.25);
+}
+.homevideo{
+    /*position: absolute;*/
+    text-align:left;
+    font-size: 40px;
+    margin-left:1%;
+    display:inline-block;
+}
+.subscribe{
+    padding: 30px;
+    font-size: 30px;
+    background-color:rgb(84, 88, 87);
+    color: black;
+}
+input[type=email]{
+    width: 25%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background-color:white;
+    border: none;
+}
+input[type=submit]{
+    width: 15%;
+    padding: 10px;
+    background-color: rgb(148, 211, 223);
+    border: none;
+    font-size: 20px;
+}
+video{
+    width: 1000px; 
+    height: 700px;
+    padding: 20px;
+    margin-left: 200px;
+}
+footer{
+    padding-top: 100px;
+    text-align: center;
+    bottom: 0;
+    font-size: 20px;
+}
