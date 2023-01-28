@@ -1,0 +1,365 @@
+body{
+    background-color: black;
+    font-family: Verdana, Arial, sans-serif;
+    margin: 10px;
+}
+header{
+    margin-left: 65px;
+    max-height: 768px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+    font-family:"Brush Script MT", cursive;
+}
+header a:hover{
+    color: violet;
+}
+.services a:hover, .certifications a, .resume a, .about a, .contact a{
+    color: black;
+    text-decoration: none;
+}
+.services a, .certifications a:hover, .resume a:hover, .about a:hover, .contact a:hover{
+    color: white;
+    text-decoration: none;
+}
+nav{
+    float: left;
+    width: 70px;
+    height: auto;
+    padding: 15px;
+    position: fixed;
+    background-color:white;
+    border-radius: 20px;
+    opacity: 0.7;
+    display: block;
+}
+.navbar{
+    text-align: center;
+    list-style:none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: white;
+    border: 5px solid rgb(230, 139, 230);
+    background-color: rgb(230, 139, 230);
+    border-radius: 10px;
+}
+.wrapper{
+    margin-bottom: 100px;
+}
+.summary{
+    margin-left: 130px;
+    float: left;
+    width: 577px;
+    height: 245px;
+    padding: 20px;
+    background-image: url(media/testimonials.gif);
+    background-position:center;
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+}
+
+.summary p{
+    padding-top: 10px;
+}
+.location{
+    background-image: url(media/boston.png);
+    background-position:center;
+    background-size: cover;
+    float: left;
+    width: 283px;
+    height: 285px;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+.services{
+    background-image: url(media/testimonials.gif);
+    background-position:center;
+    background-size: cover;
+    float: left;
+    width: 283px;
+    height: 580px;
+    margin-left: 15px;
+    border-radius: 20px;
+}
+.border{
+    margin-left: 15px;
+    width: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(230, 139, 230);
+}
+.services .border{
+    margin-top: 520px;
+}
+.certifications .border{
+    margin-top: 220px;
+    width: 105px;
+}
+.certifications{
+    position: absolute;
+    float: left;
+    margin-top: 300px;
+    margin-left: 130px;
+}
+.linkedin{
+    position: absolute;
+    float: left;
+    margin-top: 300px;
+    margin-left: 445px;
+}
+.resume{
+    background-image: url(media/resume.jpg);
+    background-position:center;
+    background-size: cover;
+    position: absolute;
+    float: left;
+    margin-top: 300px;
+    margin-left: 760px;
+    width: 283px; 
+    height: 565px; 
+    border-radius: 20px
+}
+.resume .border{
+    width: 70px;
+    margin-top: 510px;
+}
+.about{
+    margin-left: 130px;
+    margin-top: 10px;
+    float: left;
+    width: 577px;
+    height: 205px;
+    padding: 20px;
+    padding-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.about .border{
+    float: right;
+    margin-top: 25px;
+    width: 150px;
+}
+.past{
+    background-color: white;
+    float: left;
+    width: 283px;
+    height: 270px;
+    margin-top: 15px;
+    margin-left: 315px;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+.past p{
+    text-align: center;
+}
+.testimonials{
+    background-image: url(media/testimonials.gif);
+    background-position:center;
+    background-size: cover;
+    opacity: 0.9;
+    overflow: scroll;
+    margin-left: 130px;
+    margin-top: 15px;
+    float: left;
+    width: 550px;
+    height: 205px;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    color: white;
+}
+.contact{
+    position: relative;
+    margin-left: 15px;
+    margin-top: 15px;
+    float: left;
+    width: 570px;
+    height: 205px;
+    padding: 20px;
+    padding-top: 50px;
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+.contact .border{
+    float: right;
+    margin-top: 25px;
+    width: 200px;
+}
+#about{
+    background-image: url(media/bg.gif);
+    background-position:center;
+    background-size: cover;
+    min-width: auto;
+    min-height: 100%;
+    padding-top: 100px;
+    padding-bottom: 450px;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+.info{
+    display: block;
+    padding-left: 600px;
+    padding-right: 50px;
+}
+#certifications{
+    margin-left: 130px;
+    color: white;
+    float: left;
+}
+#certifications h2{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.gallery{
+    float: left;
+    color: white;
+    padding: 10px;
+}
+.gallery:hover{
+    transform: scale(1.25);
+}
+.gallery figcaption { 
+    font-style: italic;
+    font-family: Georgia, serif; 
+}
+#services{
+    min-width: 700px;
+    min-height: 100%;
+    float: left;
+    margin-left: 130px;
+    color: white;
+}
+#services h2{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.myserv{
+    float: left;
+    width: 40%;
+    padding:2.5%;
+    text-align: center;
+}
+.footer{
+    background-color: rgb(230, 139, 230);
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 15px;
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .summary{
+        width:100%;
+    }
+
+    .location{
+        display: none;
+    }
+    .resume{
+        display: none;
+    }
+    .services{
+        display: none;
+    }
+    .past{
+        display: none;
+    }
+    #about{
+        width: 125%;
+    }
+    .about{
+        margin-top: 300px;
+        width: 100%;
+    }
+    .testimonials{
+        width: 100%;
+    }
+    .contact{
+        width: 100%;
+        margin-left: 130px;
+        padding-top: 15px;
+        margin-top: 0px;
+    }
+    .info{
+        padding-left: 400px;
+    }
+    .footer{
+        width: 122%;
+    }
+}
+
+@media screen and (max-width: 365px){
+    html,body{
+        width: 150%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .summary{
+        width:100%;
+    }
+
+    .location{
+        display: none;
+    }
+    .resume{
+        display: none;
+    }
+    .services{
+        display: none;
+    }
+    .past{
+        display: none;
+    }
+    #about{
+        width: 125%;
+    }
+    .about{
+        margin-top: 300px;
+        width: 100%;
+    }
+    .testimonials{
+        width: 100%;
+    }
+    .contact{
+        width: 100%;
+        margin-left: 130px;
+        padding-top: 15px;
+        margin-top: 0px;
+    }
+    .info{
+        padding-left: 400px;
+    }
+    .footer{
+        width: 122%;
+}
+}
