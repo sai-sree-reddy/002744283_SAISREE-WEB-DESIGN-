@@ -1,0 +1,35 @@
+{
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+    },
+    "[css]": {
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+    },
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ],
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+    },
+    "liveServer.settings.port": 5501
+}

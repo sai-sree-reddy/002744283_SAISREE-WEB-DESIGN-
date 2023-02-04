@@ -1,0 +1,24 @@
+tr.dropDownTextArea {
+    visibility: collapse;
+}
+
+tr.expandedTextArea {
+    visibility: visible !important;
+}
+
+#button:disabled {
+    color: white;
+    background-color: grey;
+    border: 2px solid grey;
+}
+
+table td:nth-child(9),
+table th:nth-child(9),
+table td:nth-child(10),
+table th:nth-child(10) {
+    display: none;
+}
+
+.visible-cell {
+    display: table-cell !important;
+}
