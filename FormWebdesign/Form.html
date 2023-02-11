@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Feedback</title>
+	<style>
+		label {
+			float: left;
+			width: 250px;
+		}
+
+		#container {
+			width: 700px;
+			margin: auto;
+			background-color: beige;
+		}
+
+		main {
+			padding: 50px;
+		}
+
+		.dynamicRadioBtn {
+			display: none;
+		}
+
+		.textReason {
+			display: none;
+		}
+
+		table {
+			width: 1300px;
+			margin: auto;
+			text-align: center;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+		}
+
+		.table-header {
+			text-align: center;
+			font-size: 25px;
+		}
+
+		#tableData {
+			visibility: hidden;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="container">
+
+		<main>
+			<h2>Feeback</h2>
+			<h3>Love something? Hate something? Let us know!</h3>
+			Note : Fields marked with an asterisk(*) are mandatory
+			<br><br>
+			<form id="myForm" method="post">
+				<label>Title*:</label>
+				<input type="radio" name="title" id="miss" value="Miss" required="required" />Miss
+				<input type="radio" name="title" id="mr" value="Mr" required="required" />Mr.
+				<input type="radio" name="title" id="mrs" value="Mrs" required="required" />Mrs.
+				<br><br>
+				<label for="firstName">First Name*:</label>
+				<input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+				<br><br>
+
+				<div id="error_firstName" style="display: none; color: red;">
+					Invalid input for the First Name. Only text are allowed.
+					<br><br>
+				</div>
+
+				<label for="lastName">Last Name*:</label>
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+				<br><br>
+
+				<div id="error_lastName" style="display: none; color: red;">
+					Invalid input for the Last Name. Only text are allowed.
+					<br><br>
+				</div>
+
+				<label for="emailId">Email Id*:</label>
+				<input type="text" name="emailId" id="emailId" placeholder="yourname@northeastern.edu" required />
+				<br><br>
+
+				<div id="error_emailId" style="display: none; color: red;">
+					Invalid input for the Email Id. Please enter valid northeastern email.
+					<br><br>
+				</div>
+
+				<label for="phoneNumber">Phone Number*:</label>
+				<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required />
+				<br><br>
+
+				<div id="error_phoneNumber" style="display: none; color: red;">
+					Invalid input for the Phone Number. Please enter valid phone number.
+					<br><br>
+				</div>
+
+				<label for="streetAddress1">Street Address 1*:</label>
+				<input type="text" name="streetAddress1" id="streetAddress1" placeholder="address" required />
+				<br><br>
+
+				<label for="streetAddress2">Street Address 2:</label>
+				<input type="text" name="streetAddress2" id="streetAddress2" placeholder="address" />
+				<br><br>
+
+				<label for="city">City*:</label>
+				<input type="text" name="city" id="city" placeholder="city" required />
+				<br><br>
+
+				<label for="state">State*:</label>
+				<input type="text" name="state" id="state" placeholder="state" required />
+				<br><br>
+
+				<label for="zipcode">ZipCode*:</label>
+				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxx" required />
+				<br><br>
+
+				<div id="error_zipcode" style="display: none; color: red;">
+					Invalid input for the Zip Code. Please enter a valid Zip Code.
+					<br><br>
+				</div>
+
+				<label for="info">How did you hear about us*:</label>
+				<input type='checkbox' name="source" id="facebook" value="Facebook" /> Facebook
+				<input type='checkbox' name="source" id="google" value="Google" /> Google
+				<input type='checkbox' name="source" id="yelp" value="Yelp" /> Yelp
+				<br><br>
+
+				<label for="comments">Comments*:</label>
+				<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
+				<br><br>
+
+				<label for="rating">What did you like the most?*:</label>
+				<select name="rating" id="rating" required>
+					<option value="">Choose Option</option>
+					<option value="athleisure">Athleisure</option>
+					<option value="footwear">Footwear</option>
+					<option value="accessories">Accessories</option>
+					<option value="kit">Kit</option>
+					<option value="affordability">Affordability</option>
+				</select>
+				<br><br>
+
+				<div id="dynamicRadioBtn" class="dynamicRadioBtn">
+					<br><br>
+				</div>
+
+				<div id="textReason" class="textReason">
+					<br>
+					<label for="ratingComment">Your Feedback*: </label>
+					<textarea name="ratingComment" id="ratingComment" placeholder="Your comments" cols="30" rows="10" required></textarea>
+					<br><br>
+				</div>
+
+				<input type="Submit">
+				<input type="Reset">
+				<br><br>
+			</form>
+		</main>
+	</div>
+
+	<br><br>
+
+	<div class="table-container">
+		<h2 class="table-header">Feedback Data:</h2><br><br>
+		<table id="tableData">
+			<tr>
+				<th>Name</th>
+				<th>Email ID</th>
+				<th>Phone Number</th>
+				<th>Street Address 1</th>
+				<th>Street Address 2</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip Code</th>
+				<th>Source</th>
+				<th>Comments</th>
+				<th>Choice Selected</th>
+				<th>Feedback</th>
+			</tr>
+
+		</table>
+		<br><br><br>
+	</div>
+
+	<script>
+
+		const form = document.getElementById("myForm"); 
+
+		// regex checks variables
+		var regExName = /^[a-zA-Z\s]+$/;
+		var regExEmail = /([\w\.]+)@northeastern.edu$/;
+		var regExPhone = /\d{3}-?\d{3}-\d{4}$/;   
+		var regExZipcode = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+
+		const firstName = document.getElementById("firstName");
+		firstName.addEventListener("input", validate);
+
+		const lastName = document.getElementById("lastName");
+		lastName.addEventListener("input", validate);
+
+		const emailId = document.getElementById("emailId");
+		emailId.addEventListener("input", validate);
+
+		const phoneNumber = document.getElementById("phoneNumber");
+		phoneNumber.addEventListener("input", validate);
+
+		const zipcode = document.getElementById("zipcode");
+		zipcode.addEventListener("input", validate);
+
+		const titles = document.querySelectorAll('input[name="title"]');
+		const streetAddress1 = document.getElementById('streetAddress1');
+		const streetAddress2 = document.getElementById('streetAddress2');
+		const city = document.getElementById('city');
+		const state = document.getElementById('state');
+		const sources = document.querySelectorAll('input[name="source"]');
+		const comments = document.getElementById('comments');
+		const ratingSelected = document.getElementById('rating');
+		const dynamicRadioBtn = document.getElementById('dynamicRadioBtn');
+		const textReason = document.getElementById('textReason');
+		const ratingComment = document.getElementById('ratingComment');
+
+		let table = document.getElementById("tableData");
+
+		let validdataBool = false;
+		let validdataErrors = {};
+
+
+		form.addEventListener("submit", e => {
+			e.preventDefault();
+
+			table.style.visibility = "visible";
+
+			let title;
+
+			for (let i = 0; i < titles.length; i++) {
+				if (titles[i].checked) {
+					validdataBool = true;
+					title = titles[i].value;
+				}
+			}
+
+			let source = "";
+
+			for (let i = 0; i < sources.length; i++) {
+				if (sources[i].checked) {
+					source += sources[i].value + ", ";
+				}
+			}
+
+			if (
+				// Validate Rating selected
+				validdataBool &&
+					firstName.value != "" &&
+					lastName.value != "" &&
+					emailId.value != "" &&
+					phoneNumber.value != "" &&
+					streetAddress1.value != "" &&
+					city.value != "" &&
+					state.value != "" &&
+					zipcode.value != "" && ratingSelected.value != "" &&
+				ratingComment.value != ""
+			) {
+				tableData.innerHTML += `
+      <tr>
+        <td>${title}. ${firstName.value} ${lastName.value}</td>
+        <td>${emailId.value}</td>
+        <td>${phoneNumber.value}</td>
+        <td>${streetAddress1.value}</td>
+        <td>${streetAddress2.value}</td>
+        <td>${city.value}</td>
+        <td>${state.value}</td>
+        <td>${zipcode.value}</td>
+		<td>${source.substring(0, source.length-2)}</td>
+        <td>${comments.value}</td>
+        <td>${ratingSelected.value}</td>
+        <td>${ratingComment.value}</td>
+      </tr>`
+					;
+
+				alert("Details have been uploaded to the table!");
+				form.reset();
+				dynamicRadioBtn.style.display = "none";
+				textReason.style.display = "none";
+
+				validdataBool = false;
+			} else {
+				alert("Please enter valid details. How did you hear about us?");
+			}
+
+		})
+
+		form.addEventListener("reset", resetButton);
+
+		function resetButton() {
+				form.reset();
+				dynamicRadioBtn.style.display = "none";
+				textReason.style.display = "none";
+
+				validdataBool = false;
+		}
+
+		function validate(e) {
+			console.log(validate);
+			var value = e.target.value;
+			console.log(value);
+			var type = this.id;
+			var em = "error_" + type;
+
+			switch (type) {
+				case "firstName":
+					if (!value.trim().match(regExName)) {
+						document.getElementById(em).style.display = "block";
+						this.style.border = "2px solid red";
+						firstName.style.color = "red";
+					}
+					else {
+						document.getElementById(em).style.display = "none";
+						this.style.border = "";
+						firstName.style.color = "black";
+					}
+					break;
+
+				case "lastName":
+					if (!value.trim().match(regExName)) {
+						document.getElementById(em).style.display = "block";
+						this.style.border = "2px solid red";
+						lastName.style.color = "red";
+					}
+					else {
+						document.getElementById(em).style.display = "none";
+						this.style.border = "";
+						lastName.style.color = "black";
+					}
+					break;
+
+				case "emailId":
+					if (!value.trim().match(regExEmail)) {
+						document.getElementById(em).style.display = "block";
+						this.style.border = "2px solid red";
+						emailId.style.color = "red";
+					}
+					else {
+						document.getElementById(em).style.display = "none";
+						this.style.border = "";
+						emailId.style.color = "black";
+					}
+					break;
+
+				case "phoneNumber":
+					if (!value.trim().match(regExPhone)) {
+						document.getElementById(em).style.display = "block";
+						this.style.border = "2px solid red";
+						phoneNumber.style.color = "red";
+					}
+					else {
+						document.getElementById(em).style.display = "none";
+						this.style.border = "";
+						phoneNumber.style.color = "black";
+					}
+					break;
+
+				case "zipcode":
+					if (!value.trim().match(regExZipcode)) {
+						document.getElementById(em).style.display = "block";
+						this.style.border = "2px solid red";
+						zipcode.style.color = "red";
+					}
+					else {
+						document.getElementById(em).style.display = "none";
+						this.style.border = "";
+						zipcode.style.color = "black";
+					}
+					break;
+
+			}
+		}
+		ratingSelected.onchange = (e) => {
+
+			if (e.target.value == "athleisure") {
+
+				dynamicRadioBtn.style.display = "block";
+				textReason.style.display = "none";
+
+				dynamicRadioBtn.innerHTML = `
+      <p>Glad that you liked our athleisure Experience, what did you like the most?</p>
+      <input id="athleisurequalityRadioBtn" type='radio' name="choice" value="athleisurequality" required="required"/> quality
+	  <input id="athleisurefitRadioBtn" type='radio' name="choice" value="athleisurefit" required="required"/> fitting
+      <br><br>
+    `;
+     			const athleisurequalityRadioBtn = document.getElementById("athleisurequalityRadioBtn");
+				const athleisurefitRadioBtn = document.getElementById("athleisurefitRadioBtn");
+
+
+				athleisurequalityRadioBtn.addEventListener("click", () => {
+
+					if (athleisurequalityRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+				athleisurefitRadioBtn.addEventListener("click", () => {
+
+					if (athleisurefitRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+			} else if (e.target.value == "footwear") {
+
+				dynamicRadioBtn.style.display = "block";
+				textReason.style.display = "none";
+
+				dynamicRadioBtn.innerHTML = `
+      <p>Glad that you liked our footwear, what did you like the most?</p>
+      <input id="footwearColorRadioBtn" type='radio' name="choice" value="footwearColor" required="required"/> choice of colors
+	  <input id="footwearSoleRadioBtn" type='radio' name="choice" value="footwearSole" required="required"/> sole grip
+      <br><br>
+    `;
+
+				const footwearColorRadioBtn = document.getElementById("footwearColorRadioBtn");
+				const footwearSoleRadioBtn = document.getElementById("footwearSoleRadioBtn");
+
+				footwearColorRadioBtn.addEventListener("click", () => {
+
+					if (footwearColorRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+				footwearSoleRadioBtn.addEventListener("click", () => {
+
+					if (footwearSoleRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+
+			} else if (e.target.value == "accessories") {
+
+				dynamicRadioBtn.style.display = "block";
+				textReason.style.display = "none";
+
+				dynamicRadioBtn.innerHTML = `
+      <p>Glad that you liked our accessories, what did you like the most?</p>
+      <input id="accvarietyRadioBtn" type='radio' name="choice" value="accvariety" required="required"/> variety
+	  <input id="accaestheticsRadioBtn" type='radio' name="choice" value="accaesthetics" required="required"/> aesthetics
+      <br><br>
+    `;
+
+				const accvarietyRadioBtn = document.getElementById("accvarietyRadioBtn");
+				const accaestheticsRadioBtn = document.getElementById("accaestheticsRadioBtn");
+
+				accvarietyRadioBtn.addEventListener("click", () => {
+
+					if (accvarietyRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+				accaestheticsRadioBtn.addEventListener("click", () => {
+
+					if (accaestheticsRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+			} else if (e.target.value == "kit") {
+
+				dynamicRadioBtn.style.display = "block";
+				textReason.style.display = "none";
+
+				dynamicRadioBtn.innerHTML = `
+      <p>Glad that you liked our kit, what did you like the most?</p>
+      <input id="kitOptionsRadioBtn" type='radio' name="choice" value="kitOptions" required="required"/>available options
+	  <input id="kitSizeRadioBtn" type='radio' name="choice" value="kitSize" required="required"/>size
+
+      <br><br>
+    `;
+
+				const kitOptionsRadioBtn = document.getElementById("kitOptionsRadioBtn");
+				const kitSizeRadioBtn = document.getElementById("kitSizeRadioBtn");
+
+				kitOptionsRadioBtn.addEventListener("click", () => {
+
+					if (kitOptionsRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+				kitSizeRadioBtn.addEventListener("click", () => {
+
+					if (kitSizeRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+			} else if (e.target.value == "affordability") {
+
+				dynamicRadioBtn.style.display = "block";
+				textReason.style.display = "none";
+
+				dynamicRadioBtn.innerHTML = `
+      <p>Glad that you liked our Affordability, what did you like the most?</p>
+      <input id="affordStoreRadioBtn" type='radio' name="choice" value="affordStore" required="required"/>Store Affordability
+	  <input id="affordOnlineRadioBtn" type='radio' name="choice" value="affordOnline" required="required"/>Online Affordability
+
+      <br><br>
+    `;
+
+				const affordStoreRadioBtn = document.getElementById("affordStoreRadioBtn");
+				const affordOnlineRadioBtn = document.getElementById("affordOnlineRadioBtn");
+
+
+
+				affordStoreRadioBtn.addEventListener("click", () => {
+
+					if (affordStoreRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+				affordOnlineRadioBtn.addEventListener("click", () => {
+
+					if (affordOnlineRadioBtn.checked) {
+						textReason.style.display = "block";
+						if (ratingComment.value.length == 0) {
+							validdataBool = false;
+						}
+					} else {
+						textReason.style.display = "none";
+					}
+				})
+
+			}
+		}
+
+	</script>
+
+</body>
+</html>
