@@ -1,0 +1,27 @@
+.container {
+    background: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body h5 {
+    color: rgb(232, 50, 50);
+}
+
+.body-section {
+    background-color: rgb(183, 31, 248);
+}
+
+#submitbtn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(20, 187, 76);
+}
+
+.calc-head {
+    color: #1a1818;
+}
+
+label {
+    font-weight: bold;
+    color: rgb(95, 87, 85);
+}

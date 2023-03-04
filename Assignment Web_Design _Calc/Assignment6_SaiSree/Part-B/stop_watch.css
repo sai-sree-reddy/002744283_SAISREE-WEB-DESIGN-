@@ -1,0 +1,64 @@
+#stopwatch {
+  color: rgb(27, 31, 31);
+  font-style: italic;
+}
+
+.container {
+  height: 500px;
+  padding: 200px 200px;
+  text-align: center;
+}
+
+#display {
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.buttons {
+  text-align: center;
+}
+
+#starttimer {
+  background-color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(5, 161, 36);
+  border: 3px solid goldenrod;
+}
+
+#starttimer:hover {
+  background-color: rgb(196, 195, 198);
+  color: rgb(152, 6, 6);
+  border: 3px solid black;
+}
+
+
+#stoptimer {
+  background-color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  color: rgb(139, 5, 5);
+  border: 3px solid goldenrod;
+}
+
+#stoptimer:hover {
+  background-color: rgb(17, 16, 16);
+  color: rgb(144, 6, 9);;
+  border: 3px solid goldenrod;
+}
+
+#reset {
+  background-color: black;
+  font-size: 20px;
+  font-weight: bolder;
+  color: blueviolet;
+  border: 3px solid goldenrod;
+}
+
+#reset:hover {
+  background-color: rgb(243, 107, 206);
+  color: black;
+  border: 3px solid black;
+}
